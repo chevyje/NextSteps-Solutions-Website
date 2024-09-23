@@ -18,7 +18,7 @@
     border: none;
     outline: none;
     width: 100vw;
-    height:fit-content;
+    height: 8.25%;
     top: 0;
     left: 0;
     background-color: var(--accent-color);
@@ -36,7 +36,6 @@
 
 .nav-button {
   display: inline;
-  padding: 8px;
   color: var(--text-color);
 }
 
@@ -44,6 +43,7 @@
     color: var(--text-color);
     text-decoration: none;
     user-select: none;
+    font-size: 20px;
 }
 
 #nav-list {
@@ -56,16 +56,17 @@
 .nav-button {
     display: block;
     text-align: center;
-    padding: 17px 16px;
+    padding: 1.40vw 1.40vw;
     text-decoration: none;
 }
 
 #profiel-button {
     display: block;
     text-align: center;
-    padding: 17px 16px;
+    padding: 1.575vw 1.575vw;
     text-decoration: none;
     fill: #C2D3CD;
+    transform: scale(2.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,9 +81,8 @@
 }
 
 #logo {
-    width: 9%;
+    width:9%;
     border-radius: 15px;
     margin: 5px 0 0 5px;
     display: inline;
 }
-

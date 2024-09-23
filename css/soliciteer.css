@@ -1,14 +1,30 @@
-/* Basic styling */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --background-color: #1B252F;
+    --accent-color: #087F8C;
+    --accent2-color: #C2D3CD;
+    --text-color: #fbfbfb;
+    --contrast-color: #F3F316;
+}
+
+html {
+    font-family: Poppins, 'Segoe UI', sans-serif;
+    color: var(--text-color);
+}
+
+.wrapper{
+    margin-top: 60px;
+}
+
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #1b252f;
 }
 
 header {
-    background-color: #4CAF50;
-    color: white;
+    color: var(--contrast-color);
     text-align: center;
     padding: 1em 0;
 }
@@ -21,7 +37,7 @@ header {
 }
 
 h2 {
-    color: #f3f316;
+    color: var(--contrast-color);
     text-align: center;
 }
 
@@ -30,11 +46,11 @@ h2 {
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .job {
-    background-color: #c2d3cd;
+    background-color: var(--accent-color);
     padding: 1em;
     margin-bottom: 1em;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -67,12 +83,11 @@ h2 {
 
 .job-description {
     display: none;
-    color: #1b252f;
 }
 
 .toggle-btn {
-    background-color: #4CAF50;
-    color: white;
+    background-color: var(--background-color);
+    color: var(--text-color);
     border: none;
     padding: 0.5em 1em;
     cursor: pointer;
@@ -81,7 +96,7 @@ h2 {
 }
 
 .toggle-btn:hover {
-    background-color: #45a049;
+    background-color: #243545;
 }
 
 /* Media Queries for responsiveness */
