@@ -4,38 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Werken bij ons</title>
-    <link rel="stylesheet" href="werken.css">
-    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="/css/werken.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/top-button.css">
 </head>
 <body>
-    <h3>Nextstep Solutions</h3>
-    <h1>Werken bij ons</h1>
+    <div id="page-top">
+        <h3 id="top">Nextstep Solutions</h3>
+        <h1>Werken bij ons</h1>
+    </div>
+
     <div>
         <div id="image-text-1" class="image-text-box">
-            <img src="/assets/img/meeting.jpg" alt="meeting image">
+            <img src="/assets/img/meeting.jpg" alt="meeting image" class="text-image">
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut voluptas architecto at. Quos necessitatibus sit molestiae fugiat. Ratione sapiente deleniti delectus. Cupiditate, quaerat atque qui maiores necessitatibus laboriosam eum ratione.
             </p>
         </div>
         <div id="image-text-2" class="image-text-box">
-            <img src="/assets/img/desk.jpg" alt="desk image">
+            <img src="/assets/img/desk.jpg" alt="desk image" class="text-image">
             <p>
                 Bij Nextstep Solutions vereisen we minimaal een afgeronde hbo-opleiding in ICT. Dit is essentieel voor het werken aan onze technologische oplossingen. Kandidaten moeten kennis hebben van netwerkbeheer, softwareontwikkeling of cybersecurity, zodat zij effectief kunnen bijdragen aan onze groei in de digitale wereld.
             </p>
         </div>
         <div id="image-text-3" class="image-text-box">
-            <img src="/assets/img/screens.jpg" alt="screens image">
+            <img src="/assets/img/screens.jpg" alt="screens image" class="text-image">
             <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. A deleniti, dolore mollitia in suscipit est libero ipsum beatae fugiat, laborum cupiditate possimus recusandae et, ipsa enim provident non totam eaque.
             </p>
         </div>
     </div>
-
+    
+    <!-- navigatie bar -->
     <div id="nav-bar">
-        <a href="profiel.html" class="button" id="profiel-button">Profiel</a>
+        <a href="profiel.html" class="button" id="profiel-button">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#C2D3CD">
+                <path d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm246-164q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q53 0 100-15.5t86-44.5q-39-29-86-44.5T480-280q-53 0-100 15.5T294-220q39 29 86 44.5T480-160Zm0-360q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm0-60Zm0 360Z"/>
+            </svg>
+        </a>
         <a href="login.html" class="button" id="login-button">Log in</a>
         <a href="Werken.html" class="button">Werken bij ons</a>
         <a href="index.html" class="button">Home</a>
+        <img src="/assets/img/logo.png" id="logo">
     </div>
+    <div id="top-button">
+        <a href="#top">
+            <svg height="24px" viewBox="0 -960 960 960" width="24px" fill="#F3F316">
+                <path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"/>
+            </svg>
+        </a>
+    </div>
+
+
+    <script src="/js/top-button.js"></script>
 </body>
 </html>
