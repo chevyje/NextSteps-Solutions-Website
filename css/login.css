@@ -47,11 +47,21 @@ input[type=text], input[type=password], input[type=email] {
     box-sizing: border-box;
 }
 
+button[type=submit]{
+    width: 80%;
+    height: 50px;
+    border: 1px solid var(--accent2-color);
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
 form div{
     width: 100%;
     display: flex;
     justify-content: center;
-    margin: 8px;
+    margin: 8px 0;
 }
 
 label{
