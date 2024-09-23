@@ -1,0 +1,47 @@
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1b252f;
+}
+
+header {
+    background-color: #087f8c;
+    color: #fbfbfb;
+    text-align: center;
+    padding: 1em 0;
+}
+
+#job-listings {
+    margin: 2em auto;
+    width: 80%;
+    max-width: 600px;
+}
+
+h2 {
+    color: #f3f316;
+    text-align: center;
+}
+
+#jobs {
+    list-style-type: none;
+    padding: 0;
+}
+
+.job {
+    background-color: #c2d3cd;
+    padding: 1em;
+    margin-bottom: 1em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.job h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.job p {
+    margin: 0.5em 0;
+}
