@@ -2,12 +2,36 @@
     --background-color: #1B252F;
     --accent-color: #087F8C;
     --accent2-color: #C2D3CD;
-    --text-color: #FBFBFB;
+    --text-color: #fbfbfb;
     --contrast-color: #F3F316;
 }
 
-.nav {
-    
+#nav-bar {
+    position: fixed;
+    display: inline;
+    z-index: 99;
+    border: none;
+    outline: none;
+    width: 100%;
+    height:fit-content;
+    top: 0;
+    left: 0;
+}
+
+#nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+.nav-element {
+    display: inline;
+}
+
+.nav-button {
+  display: block;
+  padding: 8px;
+  color: var(--text-color);
 }
 
 .nav-button {
@@ -16,7 +40,46 @@
     user-select: none;
 }
 
-#logo {
-    width: 7%;
-    border-radius: 15px;
+#nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--accent-color);
 }
+  
+.nav-element {
+    float: left;
+}
+  
+.nav-button {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: red;
+}
+
+#profiel-button {
+    display: block;
+    text-align: center;
+    padding: 11px 16px;
+    text-decoration: none;
+    fill: #C2D3CD;
+}
+
+#profiel-button:hover {
+    fill: #a4b2ad;
+}
+
+.nav-button:hover {
+    color: #fbfbfbbc;
+}
+
+#logo {
+    width: 12%;
+    padding: 0;
+    border-radius: 15px;
+    display: inline;
+}
+
