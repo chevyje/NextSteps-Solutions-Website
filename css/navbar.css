@@ -5,3 +5,16 @@
     --text-color: #FBFBFB;
     --contrast-color: #F3F316;
 }
+
+.nav
+
+.nav-button {
+    color: var(--text-color);
+    text-decoration: none;
+    user-select: none;
+}
+
+#logo {
+    width: 7%;
+    border-radius: 15px;
+}
