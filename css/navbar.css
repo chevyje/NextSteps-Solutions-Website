@@ -6,26 +6,32 @@
     --contrast-color: #F3F316;
 }
 
+::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+}
+
 #nav-bar {
     position: fixed;
     display: inline;
     z-index: 99;
     border: none;
     outline: none;
-    width: 100%;
+    width: 100vw;
     height:fit-content;
     top: 0;
     left: 0;
+    background-color: var(--accent-color);
 }
 
 #nav-list {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    float: right;
   }
 
 .nav-element {
     display: inline;
+    float: left;
 }
 
 .nav-button {
@@ -45,27 +51,24 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: var(--accent-color);
-}
-  
-.nav-element {
-    float: left;
 }
   
 .nav-button {
     display: block;
     text-align: center;
-    padding: 14px 16px;
+    padding: 17px 16px;
     text-decoration: none;
-    background-color: red;
 }
 
 #profiel-button {
     display: block;
     text-align: center;
-    padding: 11px 16px;
+    padding: 17px 16px;
     text-decoration: none;
     fill: #C2D3CD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #profiel-button:hover {
@@ -77,9 +80,9 @@
 }
 
 #logo {
-    width: 12%;
-    padding: 0;
+    width: 9%;
     border-radius: 15px;
+    margin: 5px 0 0 5px;
     display: inline;
 }
 
