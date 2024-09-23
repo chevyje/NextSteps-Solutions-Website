@@ -67,7 +67,7 @@
     text-decoration: none;
     fill: #C2D3CD;
     transform: scale(2.5);
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
 }

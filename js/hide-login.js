@@ -12,12 +12,12 @@ if(logged_in == true){
 
 function hideLogin(){
     loginButton.style.display = "none";
-    profielButton.style.display = "inline";
+    profielButton.style.display = "flex";
     console.log("true");
 }
 
 function hideProfiel(){
     profielButton.style.display = "none";
-    loginButton.style.display = "inline";
+    loginButton.style.display = "flex";
     console.log("false");
 }
