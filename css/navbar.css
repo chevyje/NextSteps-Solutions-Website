@@ -1,0 +1,22 @@
+:root{
+    --background-color: #1B252F;
+    --accent-color: #087F8C;
+    --accent2-color: #C2D3CD;
+    --text-color: #FBFBFB;
+    --contrast-color: #F3F316;
+}
+
+.nav {
+    
+}
+
+.nav-button {
+    color: var(--text-color);
+    text-decoration: none;
+    user-select: none;
+}
+
+#logo {
+    width: 7%;
+    border-radius: 15px;
+}
