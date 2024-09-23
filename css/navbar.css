@@ -6,7 +6,9 @@
     --contrast-color: #F3F316;
 }
 
-.nav
+.nav {
+    
+}
 
 .nav-button {
     color: var(--text-color);
