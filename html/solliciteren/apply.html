@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Job</title>
+    <link rel="stylesheet" href="/css/soliciteer.css">
+</head>
+<body>
+    <header>
+        <h1>Meld je aan voor<span id="job-title"></span></h1>
+    </header>
+
+    <section id="application-form">
+        <form action="/html/solliciteren/submit-application.html" method="POST">
+            <label for="name">Volledige Naam:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="resume">Upload CV:</label>
+            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required><br>
+
+            <label for="message">Motivatiebrief:</label>
+            <textarea id="message" name="message" rows="6" required></textarea><br>
+
+            <button type="submit">Lever In</button>
+        </form>
+    </section>
+
+    <script>
+        // Fetch the job title from the URL query parameters
+        const params = new URLSearchParams(window.location.search);
+        const jobTitle = params.get('jobTitle');
+        
+        // Set the job title in the HTML
+        if (jobTitle) {
+            document.getElementById('job-title').textContent = decodeURIComponent(jobTitle);
+        } else {
+            document.getElementById('job-title').textContent = "Unknown Job";
+        }
+    </script>
+</body>
+</html>

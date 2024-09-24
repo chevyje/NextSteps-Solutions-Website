@@ -1,6 +1,65 @@
 const loginButton = document.getElementById("login-button");
-const profielButton = document.getElementById("profiel-button");
 const logoutButton = document.getElementById("logout-button");
+const profielButton = document.getElementById("profiel-button");
+const emailbox = document.getElementById("email-box");
+const passwordBox = document.getElementById("password-box");
+
+check();
+
+
+function check(){
+    if(getCookieValue("isUserLoggedIn") == "true"){
+        loggedIn();
+    } else if(getCookieValue("isUserLoggedIn") == "false"){
+        loggedOut();
+    } else {
+        setLoginCookie(false);  
+        check();
+    }
+}
+
+function logout(){
+    setLoginCookie(false);
+    check();
+}
+
+function login(){
+    if (emailbox.value != "" && passwordBox.value != ""){
+        setLoginCookie(true)
+        check();
+    }
+        
+}
+
+function loggedIn(){
+    loginButton.style.display = "none";
+    profielButton.style.display = "inline";
+    logoutButton.style.display = "inline";
+    console.log("logged in!");
+}
+
+function loggedOut(){
+    profielButton.style.display = "none";
+    logoutButton.style.display = "none";
+    loginButton.style.display = "inline";
+    console.log("logged out!");
+}
+
+// COOKIES
+
+function setLoginCookie(loginBool) {
+    const cookieArr = document.cookie.split("; ");
+
+    for (let i = 0; i < cookieArr.length; i++) {
+        const cookiePair = cookieArr[i].split("=");
+
+        document.cookie = "isUserLoggedIn=" + loginBool + "; path=/"
+        console.log(document.cookie);
+    }
+  }
+
+// Voorbeeld: wanneer de gebruiker succesvol inlogt
+
 
 // Function to get the value of a specific cookie by name
 function getCookieValue(name) {
@@ -19,45 +78,6 @@ function getCookieValue(name) {
   return null;
 }
 
-// Read and covert cookie to boolean
-let logged_in_string = getCookieValue("loggedIn");
-let logged_in = (logged_in_string.toLowerCase() === "true"); 
-check();
-
-function check(){
-    if(logged_in == true){
-        loggedIn();
-    } else if(loggedIn == false){
-        loggedOut();
-    } else {
-        loggedIn = false;
-        check();
-    }
-}
-
-function logout(){
-    logged_in = false;
-    console.log("sick");
-    check();
-}
-
-function login(){
-    loggedIn = true;
-    check();
-}
-
-function loggedIn(){
-    loginButton.style.display = "none";
-    profielButton.style.display = "inline";
-    logoutButton.style.display = "inline";
-    document.cookie = "loggedIn=true";
-    console.log("logged in!");
-}
-
-function loggedOut(){
-    profielButton.style.display = "none";
-    logoutButton.style.display = "none";
-    loginButton.style.display = "inline";
-    document.cookie = "loggedIn=true";
-    console.log("logged out!");
+function clearCookies(){
+    document.cookie = "isUserLoggedIn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
 }
