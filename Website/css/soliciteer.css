@@ -85,57 +85,18 @@ h2 {
     display: none;
 }
 
-button.toggle-btn {
-    margin-top: 10px;
-    padding: 5px 10px;
-    background-color: #008CBA;
-    color: white;
+.toggle-btn {
+    background-color: var(--background-color);
+    color: var(--text-color);
     border: none;
-    cursor: pointer;
-}
-
-button.apply-btn {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
+    padding: 0.5em 1em;
     cursor: pointer;
     border-radius: 5px;
+    margin-top: 1em;
 }
 
-button.apply-btn:hover {
-    background-color: #45a049;
-}
-
-#application-form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-#application-form label {
-    display: block;
-    margin-top: 10px;
-}
-
-#application-form input, 
-#application-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-}
-
-button[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    margin-top: 20px;
-    border: none;
-    cursor: pointer;
-}
-
-button[type="submit"]:hover {
-    background-color: #45a049;
+.toggle-btn:hover {
+    background-color: #243545;
 }
 
 /* Media Queries for responsiveness */

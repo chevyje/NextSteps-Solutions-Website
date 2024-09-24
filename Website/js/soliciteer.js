@@ -2,23 +2,17 @@
 document.addEventListener('DOMContentLoaded', function() {
     const toggleButtons = document.querySelectorAll('.toggle-btn');
 
-    toggleButtons.forEach((button) => {
+    toggleButtons.forEach((button, index) => {
         button.addEventListener('click', function() {
             const jobDescription = this.previousElementSibling;
             
             if (jobDescription.style.display === 'block') {
                 jobDescription.style.display = 'none';
-                this.textContent = 'Show More';
+                this.textContent = 'Toon Meer';
             } else {
                 jobDescription.style.display = 'block';
-                this.textContent = 'Show Less';
+                this.textContent = 'Toon Minder';
             }
         });
     });
 });
-
-
-function applyJob(jobTitle) {
-   
-    window.location.href = `apply.html?jobTitle=${encodeURIComponent(jobTitle)}`;
-}
