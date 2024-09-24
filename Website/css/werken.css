@@ -34,6 +34,7 @@ body {
     color: var(--text-color);
 }
 
+/* Basic styling for the image-text-box */
 .image-text-box {
     width: 30%; /* Each box will take 30% of the container width */
     padding: 20px;
@@ -46,7 +47,7 @@ body {
 
 /* Ensures the images fit inside the box */
 .text-image {
-    max-width: 100%;    
+    max-width: 100%;
     height: auto;
     border-radius: 8px;
 }
@@ -55,12 +56,10 @@ body {
 #page-top + div {
     display: flex;
     justify-content: space-between; /* Distributes boxes evenly */
-    align-items: flex-start;
+    align-items: stretch; /* Makes all boxes the same height */
     margin: 20px 0;
     padding: 0 5%; /* Adds padding on left and right */
 }
-
-
 
 /* Media query for mobile responsiveness */
 @media screen and (max-width: 768px) {
@@ -71,5 +70,6 @@ body {
 
     .image-text-box {
         width: 80%; /* Take up more width on smaller screens */
+        margin: 10px 0; /* Margin to separate the stacked boxes */
     }
 }
