@@ -8,13 +8,26 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     $lastname = htmlspecialchars($_POST['achternaam']);
     $email = htmlspecialchars($_POST["email"]);
     $password = htmlspecialchars($_POST["password"]);
+    $passwordconfirm = htmlspecialchars($_POST["password-confirm"]);
 
+    if($password != $passwordconfirm)
+    {
+        Header("Location: ../registreer.html");
+        exit();
+    }
+
+    if(empty($firstname) || empty($lastname) || empty($email) || empty($password) || empty($passwordconfirm))
+    {
+        Header("Location: ../registreer.html");
+        exit();
+    }
+    
     $conn = OpenCon();
     echo "Connected Successfully";
     echo "<br>";
 
     $sql = "INSERT INTO users (firstname, lastname, email, password)
-            VALUES ('John', 'Doe', '$email', '')";
+            VALUES ('$firstname', '$lastname', '$email', '$password')";
 
     echo $sql;
     echo "<br>";
