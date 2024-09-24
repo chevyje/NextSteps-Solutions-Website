@@ -8,10 +8,10 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (jobDescription.style.display === 'block') {
                 jobDescription.style.display = 'none';
-                this.textContent = 'Show More';
+                this.textContent = 'Toon Meer';
             } else {
                 jobDescription.style.display = 'block';
-                this.textContent = 'Show Less';
+                this.textContent = 'Toon Minder';
             }
         });
     });
