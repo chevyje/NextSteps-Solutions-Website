@@ -13,10 +13,6 @@ html {
     color: var(--text-color);
 }
 
-.wrapper{
-    margin-top: 60px;
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -169,4 +165,8 @@ button[type="submit"]:hover {
     h3 {
         font-size: 1.2em;
     }
+}
+
+.wrapper{
+    margin-top: 180px;
 }
