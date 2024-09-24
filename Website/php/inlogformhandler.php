@@ -8,6 +8,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     $email = htmlspecialchars($_POST["email"]);
     $password = htmlspecialchars($_POST["password"]);
 
+    if(empty($email) || empty($password))
+    {
+        Header("Location: ../login.html");
+        exit();
+    }
+
     $conn = OpenCon();
     echo "Connected Successfully";
     echo "<br>";
@@ -28,7 +34,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     }
 
     if($ingelogd) {
-      echo "Je bent nu ingelogd";
+      echo '<script src="../js/login.js">
+        login();
+        window.location.href = "../profiel.html";
+      </script>';
     } else {
       echo "Geen account gevonden";
     }
