@@ -22,7 +22,6 @@ function getCookieValue(name) {
 // Read and covert cookie to boolean
 let logged_in_string = getCookieValue("loggedIn");
 let logged_in = (logged_in_string.toLowerCase() === "true"); 
-
 check();
 
 function check(){
@@ -52,7 +51,7 @@ function loggedIn(){
     profielButton.style.display = "inline";
     logoutButton.style.display = "inline";
     document.cookie = "loggedIn=true";
-    console.log("true");
+    console.log("logged in!");
 }
 
 function loggedOut(){
@@ -60,5 +59,5 @@ function loggedOut(){
     logoutButton.style.display = "none";
     loginButton.style.display = "inline";
     document.cookie = "loggedIn=true";
-    console.log("false");
+    console.log("logged out!");
 }
