@@ -33,3 +33,43 @@ body {
 #page-top {
     color: var(--text-color);
 }
+
+.image-text-box {
+    width: 30%; /* Each box will take 30% of the container width */
+    padding: 20px;
+    text-align: center; /* Centers the text and image inside the box */
+    background-color: var(--accent-color); /* Light background for visibility */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for a slight 3D effect */
+    border-radius: 8px;
+    margin: 10px;
+}
+
+/* Ensures the images fit inside the box */
+.text-image {
+    max-width: 100%;    
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Container styling for aligning the image-text-boxes */
+#page-top + div {
+    display: flex;
+    justify-content: space-between; /* Distributes boxes evenly */
+    align-items: flex-start;
+    margin: 20px 0;
+    padding: 0 5%; /* Adds padding on left and right */
+}
+
+
+
+/* Media query for mobile responsiveness */
+@media screen and (max-width: 768px) {
+    #page-top + div {
+        flex-direction: column; /* Stack the boxes vertically on smaller screens */
+        align-items: center;
+    }
+
+    .image-text-box {
+        width: 80%; /* Take up more width on smaller screens */
+    }
+}
