@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apply for Job</title>
-    <link rel="stylesheet" href="/Website/css/soliciteer.css">
+    <link rel="stylesheet" href="css/soliciteer.css">
 </head>
 <body>
     <header>
@@ -11,7 +11,7 @@
     </header>
 
     <section id="application-form">
-        <form action="submit-application.html" method="POST">
+        <form id="job-application-form">
             <label for="name">Volledige Naam:</label>
             <input type="text" id="name" name="name" required><br>
 
@@ -32,13 +32,22 @@
         // Fetch the job title from the URL query parameters
         const params = new URLSearchParams(window.location.search);
         const jobTitle = params.get('jobTitle');
-        
+
         // Set the job title in the HTML
         if (jobTitle) {
             document.getElementById('job-title').textContent = decodeURIComponent(jobTitle);
         } else {
             document.getElementById('job-title').textContent = "Unknown Job";
         }
+
+        // Handle form submission and redirect
+        document.getElementById('job-application-form').addEventListener('submit', function(event) {
+            event.preventDefault();  // Prevent the default form submission
+            alert("Your application has been submitted successfully!");
+
+            // Redirect to the confirmation page
+            window.location.href = "submit-application.html";
+        });
     </script>
 </body>
 </html>
