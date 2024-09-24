@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const toggleButtons = document.querySelectorAll('.toggle-btn');
 
-    toggleButtons.forEach((button, index) => {
+    toggleButtons.forEach((button) => {
         button.addEventListener('click', function() {
             const jobDescription = this.previousElementSibling;
             
@@ -16,3 +16,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+function applyJob(jobTitle) {
+   
+    window.location.href = `apply.html?jobTitle=${encodeURIComponent(jobTitle)}`;
+}
