@@ -66,9 +66,18 @@ form div{
     height: 50px;
     width: 50px;
     background-color: var(--accent2-color);
-    fill: var(--contrast-color);
     border-radius: 10px 0 0 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+svg {
+    fill: var(--contrast-color);;
+    filter: 
+      drop-shadow(-1px -1px 0px var(--background-color)) 
+      drop-shadow(1px -1px 0px var(--background-color)) 
+      drop-shadow(1px 1px 0px var(--background-color))
+      drop-shadow(-1px 1px 0px var(--background-color))
 }
