@@ -34,6 +34,12 @@ h1 {
     color: var(--contrast-color);
 }
 
+.inleiding {
+    margin-bottom: 40px;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
 .skill {
     margin-bottom: 20px;
     cursor: pointer;
