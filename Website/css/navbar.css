@@ -6,9 +6,6 @@
     --contrast-color: #F3F316;
 }
 
-
-
-
 body {
     font-family: poppins;
 }
@@ -57,7 +54,7 @@ nav ul li a {
 }
 
 /* a.active, */
-a:hover {
+li a:hover {
     background: #07656f;
     transition: .5s;
 }
