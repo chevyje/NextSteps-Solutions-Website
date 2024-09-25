@@ -27,12 +27,8 @@ function logout(){
 
 
 function login(){
-    if(validateEmail(emailbox.value)){
-        if (emailbox.value != "" && passwordBox.value != ""){
-            setLoginCookie(true)
-            check();
-        }
-    }
+    setLoginCookie(true)
+    check();
 }
 
 
