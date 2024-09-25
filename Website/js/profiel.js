@@ -3,10 +3,8 @@ achternaam_text = document.getElementById("achternaam");
 username = document.getElementById("username");
 
 function displayName(voornaam, achternaam) {
-    console.log(typeof voornaam);
-    voornaam_text = voornaam;
-    achternaam_text.value = achternaam;
+    console.log(typeof achternaam);
+    voornaam_text.textContent = voornaam;
+    achternaam_text.textContent = achternaam;
     username.style.display = "inline";
 }
-
-displayName("Tim", "van de Beek");
