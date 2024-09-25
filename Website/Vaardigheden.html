@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaardigheden</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            max-width: 900px; /* Beperk de container tot de breedte voor 3 boxen */
+            margin: 20px auto; /* Centreer de container */
+        }
+
+        .box {
+            flex: 1 1 calc(33.333% - 20px); /* Zorgt voor 3 boxen naast elkaar met ruimte ertussen */
+            max-width: 268px; /* Maximaal 268px per box */
+            height: 500px;
+            background-color: white;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+
+        h1 {
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+
+        /* Responsieve layout voor kleinere schermen */
+        @media (max-width: 768px) {
+            .box {
+                flex: 1 1 100%; /* Boxen worden dan 100% breed op mobiele apparaten */
+                max-width: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Onze Young professionals</h1>
+    <div class="container">
+        <div class="box">
+            <img alt="profiel-foto" src="/assets/img/Tom.png" width="268px" height="300">
+            <h1>Tom</h1>
+            <p>Vaardigheden:</p>
+            <ul>
+                <li>Kan goed om met feedback</li>
+                <li>Is bereid om te leren</li>
+                <li>Verslaafd aan gokken</li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <img alt="profiel-foto" src="/assets/img/Tim.png" width="268px" height="300">
+            <h1>Tim</h1>
+            <p>Vaardigheden:</p>
+            <ul>
+                <li>Snel lerend</li>
+                <li>Betrouwbaar</li>
+                <li>Altijd moe</li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <img alt="profiel-foto" src="/assets/img/Duain.png" width="268px" height="300">
+            <h1>Duain</h1>
+            <p>Vaardigheden:</p>
+            <ul>
+                <li>Ijverig</li>
+                <li>Bereid om te leren</li>
+                <li>Kan goede tosti's maken</li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <img alt="profiel-foto" src="/assets/img/Nick.png" width="268px" height="300">
+            <h1>Nick</h1>
+            <p>Vaardigheden:</p>
+            <ul>
+                <li>Flexibel</li>
+                <li>Positieve houding tegenover kritiek</li>
+                <li>Doet niet aan sporten</li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <img alt="profiel-foto" src="/assets/img/Niek.png" width="268px" height="300">
+            <h1>Niek</h1>
+            <p>Vaardigheden:</p>
+            <ul>
+                <li>Communicatief</li>
+                <li>Verantwoordelijk</li>
+                <li>Uitslapen</li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <img alt="profiel-foto" src="/assets/img/Jurre.png" width="268px" height="300">
+            <h1>Jurre</h1>
+            <p>Vaardigheden:</p>
+            <ul>
+                <li>Is goed met WordPress</li>
+                <li>Woont in het sprookjesbos</li>
+                <li>Komt uit het sprookjesbos</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
