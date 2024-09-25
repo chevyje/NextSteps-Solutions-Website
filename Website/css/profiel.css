@@ -33,7 +33,6 @@ body{
     text-align: center;
     padding: 1em 0;
 }
-
 /* CSS for centering and enlarging the SVG */
 .svg-container {
     display: flex;
