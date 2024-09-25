@@ -8,3 +8,5 @@ function displayName(voornaam, achternaam) {
     achternaam_text.textContent = achternaam;
     username.style.display = "inline";
 }
+
+displayName("John", "Doe");
