@@ -6,8 +6,15 @@ const password_confirm_input = document.getElementById("password-confirm-input")
 
 function checkEmpty() {
     if(voornaam_input.value != "" && achternaam_input.value != "" && email_input.value != "" && password_input.value != "" && password_confirm_input.value != ""){
-       if(password_input.value == password_confirm_input.value) {
-         location.href='login.html'
+       if(validateEmail(email_input.value)){
+          if(password_input.value == password_confirm_input.value) {
+            location.href='login.html'
+          }
        }
     }
+}
+
+function validateEmail(email) {
+  var re = /\S+@\S+\.\S+/;
+  return re.test(email);
 }

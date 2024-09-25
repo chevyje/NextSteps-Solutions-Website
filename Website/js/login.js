@@ -5,7 +5,8 @@ const emailbox = document.getElementById("email-box");
 const passwordBox = document.getElementById("password-box");
 const navbar = document.getElementById("navbar");
 
-check();
+
+check(); 
 
 function check(){
     if(getCookieValue("isUserLoggedIn") == "true"){
@@ -26,11 +27,12 @@ function logout(){
 
 
 function login(){
-    if (emailbox.value != "" && passwordBox.value != ""){
-        setLoginCookie(true)
-        check();
+    if(validateEmail(emailbox.value)){
+        if (emailbox.value != "" && passwordBox.value != ""){
+            setLoginCookie(true)
+            check();
+        }
     }
-        
 }
 
 
@@ -84,3 +86,8 @@ function getCookieValue(name) {
 function clearCookies(){
     document.cookie = "isUserLoggedIn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
 }
+
+function validateEmail(email) {
+    var re = /\S+@\S+\.\S+/;
+    return re.test(email);
+  }
