@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
 
 :root{
     --background-color: #1B252F;
@@ -17,7 +17,58 @@ body{
     background-color: var(--background-color);
 }
 
-.wrapper{
-    margin-top: 100px;
+.hero{
+    height: calc(100vh - 140px);
+    background: black;
+    margin-top: 88px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
 }
 
+.heroflexbox {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    text-align: left; /* Make sure text aligns properly */
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.heroimage {
+    width: 45%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.heroinhoud {
+    width: 40%;
+    padding: 20px;
+    text-align: center;
+}
+
+.herobutton{
+    background-color: #087F8C;
+    border: 2px #087F8C;
+    color: white;
+    font-size: 15px;
+    border-radius: 20px;
+}
+
+.herobutton:hover{
+    background-color:white;
+    color: #087F8C;
+    border: 2px white;
+    font-size: 15px;
+    border-radius: 20px;
+}
+
+.buttontekst {
+    padding-left: 5px;
+    padding-right: 5px;
+}
