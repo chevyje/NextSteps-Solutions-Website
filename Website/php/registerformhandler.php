@@ -23,6 +23,24 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     }
     
     $conn = OpenCon();
+    echo "Connection succesfully";
+    echo "<br>";
+
+    $sql2 = "SELECT email FROM users";
+    $result = $conn->query($sql2);
+
+    if ($result->num_rows > 0) {
+      // output data of each row
+      while($row = $result->fetch_assoc()) {
+        if($row["email"] == $email) {
+          Header("Location: ../registreer.html");
+          exit();
+        }
+      }
+    } else {
+      echo "0 results";
+    }
+
     echo "Connected Successfully";
     echo "<br>";
 
@@ -34,7 +52,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
-        Header("Location: ../profiel");
+        Header("Location: ../login.html");
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }

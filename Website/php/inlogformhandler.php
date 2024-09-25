@@ -4,14 +4,30 @@
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
     $ingelogd = false;
+    $account = false;
     include 'db_connection.php';
     $email = htmlspecialchars($_POST["email"]);
     $password = htmlspecialchars($_POST["password"]);
 
-    if(empty($email) || empty($password))
+    if(empty($email))
     {
-        Header("Location: ../login.html");
+        echo '<script src="../js/loginError.js"></script>';
+        echo '<script> 
+                localStorage.setItem("error", "email");
+                window.location.href = "../login.html";
+              </script>';
         exit();
+    }
+
+    if(empty($password))
+    {
+      // Geef error wachtwoord is niet ingevuld;
+      echo '<script src="../js/loginError.js"></script>';
+      echo '<script>
+               localStorage.setItem("error", "password");
+               window.location.href = "../login.html"; 
+            </script>';
+      exit();
     }
 
     $conn = OpenCon();
@@ -22,10 +38,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-      // output data of each row
       while($row = $result->fetch_assoc()) {
         if($row["email"] == $email && $row["password"] == $password) {
           $ingelogd = true;
+          break;
+        } elseif ($row["email"] == $email)
+        {
+          echo "Email is het zelfde";
+          $account = true;
           break;
         }
       }
@@ -36,13 +56,21 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     if($ingelogd) {
       echo '<script src="../js/login.js"></script>';
       echo '<script>
-              login();
-              setTimeout(function() {            
-                window.location.href = "../profiel.html";
-              }, 1000);
+              window.location.href = "../profiel.html";
+              login();         
             </script>';
-    } else {
-      echo "Geen account gevonden";
+    } elseif ($account) {
+      echo '<script src="../js/loginError.js"></script>';
+      echo '<script>
+              localStorage.setItem("error", "onjuist");
+              window.location.href = "../login.html"; 
+            </script>';
+    } else{
+      echo '<script src="../js/loginError.js"></script>';
+      echo '<script>
+              localStorage.setItem("error", "account");
+              window.location.href = "../login.html"; 
+            </script>';
     }
 
     CloseCon($conn);
