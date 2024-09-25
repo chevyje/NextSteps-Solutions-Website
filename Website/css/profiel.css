@@ -8,6 +8,11 @@
     --contrast-color: #F3F316;
 }
 
+::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+}
+
 html{
     font-family: Poppins, 'Segoe UI', sans-serif;
     color: var(--text-color);

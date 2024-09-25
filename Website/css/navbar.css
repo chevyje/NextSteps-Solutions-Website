@@ -6,10 +6,7 @@
     --contrast-color: #F3F316;
 }
 
-::-webkit-scrollbar {
-    display: none;
-    -ms-overflow-style: none; /* for Internet Explorer, Edge */
-}
+
 
 
 body {
