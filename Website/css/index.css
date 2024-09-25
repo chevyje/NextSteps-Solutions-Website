@@ -18,8 +18,8 @@ body{
 }
 
 .hero{
-    height: calc(100vh - 140px);
-    background: black;
+    height: calc(100vh - 160px);
+    background: #1B252F;
     margin-top: 88px;
     padding: 20px;
     display: flex;
@@ -31,10 +31,9 @@ body{
 
 .heroflexbox {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
-    text-align: left; /* Make sure text aligns properly */
     width: 100%;
     max-width: 1200px;
     padding: 20px;
@@ -69,6 +68,176 @@ body{
 }
 
 .buttontekst {
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+.nummer2 {
+    background-color: #087F8C;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    border-radius: 20px;
+    height: auto;
+    text-align: center;
+}
+
+.inhoudnummer2 {
+    text-align: center;
+    width: 70%;
+    padding: 20px;
+    padding-bottom: 40px;
+}
+
+.boxennummer2 {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start; 
+    gap: 10px; 
+    padding: 20px;
+}
+
+.box1nummer2, .box2nummer2, .box3nummer2 {
+    width: 30%; 
+    background-color: #1B252F;
+    border-radius: 20px;
+    padding: 20px; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center; 
+}
+
+.box1nummer2 img, .box2nummer2 img, .box3nummer2 img {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+    border-radius: 10px;
+    max-height: 150px;
+}
+
+.buttonsnummer2 {
+    background-color: white;
+    border: 2px white;
+    color: #087F8C;
+    font-size: 15px;
+    border-radius: 20px;
+}
+.buttonsnummer2:hover {
+    background-color: #1B252F;
+    color: white;
+    font-size: 15px;
+    border-radius: 20px;
+}
+
+.buttontekst2 {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+.nummer3 {
+    background-color: #1B252F;
+}
+
+.inhoudnummer3 {
+    text-align: center; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    width: 80%; 
+    margin: 0 auto; 
+    padding: 20px; 
+}
+
+.boxennummer3 {
+    display: flex;
+    justify-content:center; 
+    align-items: stretch; 
+    gap: 20px; 
+    padding: 20px; 
+}
+
+.box1nummer3, .box2nummer3, .box3nummer3 {
+    flex: 1; 
+    background-color: #087F8C;
+    border-radius: 20px;
+    padding: 40px; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    text-align: center;
+    margin: 0; /
+}
+
+h2 {
+    margin: 0; 
+    padding-bottom: 10px; 
+}
+
+.box1nummer3 p, .box2nummer3 p, .box3nummer3 p {
+    flex-grow: 1; 
+}
+
+.buttonsnummer3 {
+    background-color: white;
+    border: none;
+    color: #087F8C;
+    font-size: 15px;
+    border-radius: 20px;
+    padding: 10px 20px; 
+    margin-top: auto; 
+}
+
+.buttonsnummer3:hover {
+    background-color: #1B252F;
+    color: white;
+}
+
+.buttontekst3 {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.nummer4 {
+    background-color: #087F8C;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 50px;
+
+}
+
+.buttonsnummer4 {
+    background-color: white;
+    border: none;
+    color: #087F8C;
+    font-size: 15px;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 0 5px;
+
+}
+
+.buttonsnummer4:hover {
+    background-color: #1B252F;
+    color: white;
+
+}
+
+.buttontekst4 {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 20px;
 }
