@@ -1,8 +1,6 @@
 const loginButton = document.getElementById("login-button");
 const logoutButton = document.getElementById("logout-button");
 const profielButton = document.getElementById("profiel-button");
-const emailbox = document.getElementById("email-box");
-const passwordBox = document.getElementById("password-box");
 const navbar = document.getElementById("navbar");
 
 
@@ -82,8 +80,3 @@ function getCookieValue(name) {
 function clearCookies(){
     document.cookie = "isUserLoggedIn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
 }
-
-function validateEmail(email) {
-    var re = /\S+@\S+\.\S+/;
-    return re.test(email);
-  }
