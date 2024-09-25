@@ -11,23 +11,26 @@
 
 <body>
     <!-- navigatie bar -->
-    <nav>
+    <nav id="navbar">
         <!-- Site logo -->
-        <label class="logo">Nextstep Solutions</label>
+        <label class="logo"><a id="logo" href="index.html">Nextstep Solutions</a></label>
         <!-- Navigation links -->
-        <ul>
-            <li><a class="active" href="index.html">Home</a></li>
-            <li><a href="werken.html">Werken bij ons</a></li>
-            <li><a href="solliciteer.html">Solliciteren</a></li>
-            <li><a id="logout-button" onclick="logout()">Log uit</a></li>
-            <li><a id="login-button" href="login.html">Log in</a></li>
-            <li><a id="profiel-button" href="profiel.html">Profiel</a></li>
+        <ul >
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="hbo-ict.html">HBO-ICT</a></li>
+        <li><a href="Vaardigheden.html">vaardigheden</a></li>
+        <li><a href="werken.html">Werken bij ons</a></li>
+        <li><a href="solliciteer.html">Solliciteren</a></li>
+        <li><a href="doorgroeimogelijkheden.html">Groei Door</a></li>
+        <li><a id="logout-button" onclick="logout()" href="login.html">Log uit</a></li>
+        <li><a id="login-button" href="login.html">Log in</a></li>
+        <li><a id="profiel-button" href="profiel.html">Profiel</a></li>
         </ul>
     </nav>
 
     <div class="wrapper">
         <h1>Registreer</h1>
-        <form>
+        <form action="php/registerformhandler.php" method="post">
             <!--Naam als voorbeeld: Cris van de Westelaken-->
             <div>
                 <label class="input-label" for="voornaam-input">
@@ -69,10 +72,11 @@
                 </label>
                 <input required type="password" name="password-confirm" id="password-confirm-input" placeholder="********">
             </div>
-            <button type="submit" onclick="login()">Registreer</button>
+            <button type="submit" onclick="checkEmpty()">Registreer</button>
         </form>
         <p>Heb je al een account? <a href="login.html">Log in</a></p>
 
-        <script src="/js/login.js"></script>
+        <script src="js/login.js"></script>
+        <script src="js/registreer.js"></script>
 </body>
 </html>

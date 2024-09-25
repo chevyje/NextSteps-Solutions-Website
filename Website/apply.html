@@ -1,0 +1,74 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Job</title>
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/soliciteer.css">
+</head>
+<body>
+    <div class="wrapper"></div>
+
+    <!-- navigatie bar -->
+    <nav id="navbar">
+        <!-- Site logo -->
+        <label class="logo"><a id="logo" href="index.html">Nextstep Solutions</a></label>
+        <!-- Navigation links -->
+        <ul >
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="hbo-ict.html">HBO-ICT</a></li>
+        <li><a href="Vaardigheden.html">vaardigheden</a></li>
+        <li><a href="werken.html">Werken bij ons</a></li>
+        <li><a href="solliciteer.html">Solliciteren</a></li>
+        <li><a href="doorgroeimogelijkheden.html">Groei Door</a></li>
+        <li><a id="logout-button" onclick="logout()" href="login.html">Log uit</a></li>
+        <li><a id="login-button" href="login.html">Log in</a></li>
+        <li><a id="profiel-button" href="profiel.html">Profiel</a></li>
+        </ul>
+    </nav>  
+
+    <header>
+        <h1>Meld je aan voor <span id="job-title"></span></h1>
+    </header>
+
+    <section id="application-form">
+        <form id="job-application-form">
+            <label for="name">Volledige Naam:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="resume">Upload CV:</label>
+            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required><br>
+
+            <label for="message">Motivatiebrief:</label>
+            <textarea id="message" name="message" rows="6" required></textarea><br>
+
+            <button type="submit">Lever In</button>
+        </form>
+    </section>
+
+    <script>
+        // Fetch the job title from the URL query parameters
+        const params = new URLSearchParams(window.location.search);
+        const jobTitle = params.get('jobTitle');
+
+        // Set the job title in the HTML
+        if (jobTitle) {
+            document.getElementById('job-title').textContent = decodeURIComponent(jobTitle);
+        } else {
+            document.getElementById('job-title').textContent = "Unknown Job";
+        }
+
+        // Handle form submission and redirect
+        document.getElementById('job-application-form').addEventListener('submit', function(event) {
+            event.preventDefault();  // Prevent the default form submission
+            alert("Your application has been submitted successfully!");
+
+            // Redirect to the confirmation page
+            window.location.href = "submit-application.html";
+        });
+    </script>
+</body>
+</html>

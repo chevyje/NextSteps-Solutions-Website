@@ -135,3 +135,12 @@ section {
 #logout-button {
     cursor: pointer;
 }
+
+#logo {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+#navbar {
+    display: none;
+}
