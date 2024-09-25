@@ -14,6 +14,8 @@ html{
 }
 
 body{
+    margin: 0;
+    padding: 0;
     background-color: var(--background-color);
 }
 
@@ -24,6 +26,23 @@ body{
 #username {
     display: none;
     color: var(--text-color);
+    font-size: 40px;
+}
+
+#username-box {
     text-align: center;
     padding: 1em 0;
+}
+
+/* CSS for centering and enlarging the SVG */
+.svg-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+}
+
+.svg-container svg {
+    width: 200px;
+    height: 200px;
 }
