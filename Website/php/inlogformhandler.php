@@ -57,6 +57,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
       echo '<script src="../js/login.js"></script>';
       echo '<script>
               window.location.href = "../profiel.html";
+              localStorage.setItem("voornaam", '$row["firstname"]');
+              localStorage.setItem("achternaam", '$row["lastname"]');
               login();         
             </script>';
     } elseif ($account) {
