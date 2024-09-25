@@ -23,4 +23,7 @@ body{
 
 #username {
     display: none;
+    color: var(--text-color);
+    text-align: center;
+    padding: 1em 0;
 }
