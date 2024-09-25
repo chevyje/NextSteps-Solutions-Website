@@ -4,32 +4,20 @@
     --background-color: #1B252F;
     --accent-color: #087F8C;
     --accent2-color: #C2D3CD;
-    --text-color: #FBFBFB;
+    --text-color: #fbfbfb;
     --contrast-color: #F3F316;
 }
 
-::-webkit-scrollbar {
-    display: none;
-    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+html{
+    font-family: Poppins, 'Segoe UI', sans-serif;
+    color: var(--text-color);
 }
 
-html {
-    font-family: poppins;
-}
-
-body {
+body{
     background-color: var(--background-color);
 }
 
-
-.image-text-box {
-    color: var(--text-color);
+.wrapper{
+    margin-top: 100px;
 }
 
-.text-image {
-    border-radius: 25px;
-}
-
-#page-top {
-    color: var(--text-color);
-}
