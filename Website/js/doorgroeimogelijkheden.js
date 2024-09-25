@@ -8,12 +8,12 @@ document.getElementById('roleForm').addEventListener('submit', function (event) 
     growthPaths.innerHTML = '';
 
     const careerGrowth = {
-        'junior developer': ['Mid-Level Developer', 'Senior Developer', 'Team Lead'],
-        'mid-level developer': ['Senior Developer', 'Team Lead', 'Project Manager'],
-        'senior developer': ['Team Lead', 'Engineering Manager', 'CTO'],
-        'team lead': ['Engineering Manager', 'CTO'],
-        'project manager': ['Senior Project Manager', 'Product Manager', 'COO'],
-        'engineering manager': ['Director of Engineering', 'CTO'],
+        'junior developer': ['Mid-Level Developer', 'Senior Developer', 'Scrum Master'],
+        'mid-level developer': ['Senior Developer', 'Scrum Master', 'Product Owner'],
+        'senior developer': ['Scrum Master', 'Senior Engineer', 'CTO'],
+        'scrum master': ['Senior Engineer', 'CTO'],
+        'product owner': ['Senior Product Owner', 'Product Manager', 'COO'],
+        'senior engineer': ['Director of Engineering', 'CTO'],
     };
 
     if (careerGrowth[currentRole]) {
