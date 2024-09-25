@@ -3,25 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Next Step Solutions</title>
-    <link rel="stylesheet" href="css/index.css">
+    <title>Doorgroeimogelijkheden</title>
+    <link rel="stylesheet" href="css/doorgroeimogelijkheden.css">
     <link rel="stylesheet" href="css/top-button.css">
     <link rel="stylesheet" href="css/navbar.css">
 </head>
 <body>
-    <div class="hero">
-        <div class="heroflexbox">
-            <img class="heroimage" src="assets/img/NextStepSolutions.png">
-            <div class="heroinhoud">
-                <p>NextStep Solutions is een goede plek om nog wat tekst te schrijven omdat ik ervoor moet zorgen dat dit allemaal goed gaat werken.</p>
-                <button class="herobutton">
-                    <p class="buttontekst"> Werken bij NSS </p>
-                </button>
-            </div>
-            
+    <div class="container">
+        <h1>Doorgroeien</h1>
+        <form id="roleForm">
+            <label for="currentRole">Kies je huidige rol/positie:</label>
+            <select id="currentRole" name="currentRole" required>
+                <option value="">--Kies een positie--</option>
+                <option value="junior developer">Junior Developer</option>
+                <option value="mid-level developer">Mid-Level Developer</option>
+                <option value="senior developer">Senior Developer</option>
+                <option value="team lead">Team Lead</option>
+                <option value="project manager">Project Manager</option>
+                <option value="engineering manager">Engineering Manager</option>
+            </select>
+            <button type="submit">Lever In</button>
+        </form>
+
+        <div id="growthPath" class="hidden">
+            <h2>Potentiële doorgroeimogelijkheden</h2>
+            <ul id="careerPaths"></ul>
         </div>
     </div>
-    
+
+
     <!-- navigatie bar -->
     <nav id="navbar">
         <!-- Site logo -->
@@ -52,5 +62,6 @@
     <!-- top button script -->
     <script src="js/top-button.js"></script>
     <script src="js/login.js"></script>
+    <script src="js/doorgroeimogelijkheden.js"></script>
 </body>
 </html>
