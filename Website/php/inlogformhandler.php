@@ -33,14 +33,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     $conn = OpenCon();
     echo "Connected Successfully";
     echo "<br>";
+    $firstname;
+    $lastname;
 
-    $sql = "SELECT email, password FROM users";
+    $sql = "SELECT * FROM users";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
       while($row = $result->fetch_assoc()) {
         if($row["email"] == $email && $row["password"] == $password) {
+          $firstname = $row["firstname"];
+          $lastname = $row["lastname"];
           $ingelogd = true;
+
           break;
         } elseif ($row["email"] == $email)
         {
@@ -56,9 +61,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     if($ingelogd) {
       echo '<script src="../js/login.js"></script>';
       echo '<script>
+              localStorage.setItem("voornaam", "' . $firstname . '");
+              localStorage.setItem("achternaam", "' . $lastname . '");
               window.location.href = "../profiel.html";
-              localStorage.setItem("voornaam", '$row["firstname"]');
-              localStorage.setItem("achternaam", '$row["lastname"]');
               login();         
             </script>';
     } elseif ($account) {
