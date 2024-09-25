@@ -34,10 +34,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     }
 
     if($ingelogd) {
-      echo '<script src="../js/login.js">
-        login();
-        window.location.href = "../profiel.html";
-      </script>';
+      echo '<script src="../js/login.js"></script>';
+      echo '<script>
+              login();
+              setTimeout(function() {            
+                window.location.href = "../profiel.html";
+              }, 1000);
+            </script>';
     } else {
       echo "Geen account gevonden";
     }
