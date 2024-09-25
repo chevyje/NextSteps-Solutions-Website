@@ -26,9 +26,6 @@ body {
     color: var(--text-color);
 }
 
-.text-image {
-    border-radius: 25px;
-}
 
 #page-top {
     color: var(--text-color);
@@ -41,15 +38,17 @@ body {
     text-align: center; /* Centers the text and image inside the box */
     background-color: var(--accent-color); /* Light background for visibility */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for a slight 3D effect */
-    border-radius: 8px;
+    border-radius: 20px;
     margin: 10px;
+    font-size: 19px;
 }
 
 /* Ensures the images fit inside the box */
 .text-image {
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 25px;
+    filter: drop-shadow(0 0.2rem 0.25rem rgba(0, 0, 0, 0.2));
 }
 
 /* Container styling for aligning the image-text-boxes */
@@ -77,13 +76,13 @@ body {
 .header {
     font-weight: bold;
     color: var(--contrast-color);
-    font-size: 30px;
+    font-size: 35px;
     margin: 0 0 13px 0;
 }
 
 #title {
     color: var(--contrast-color);
-    font-size: 40px;
+    font-size: 50px;
     text-align: center;
 }
 

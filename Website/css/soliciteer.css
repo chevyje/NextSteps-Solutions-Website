@@ -177,3 +177,7 @@ button[type="submit"]:hover {
     padding: 1em 0;
 }
   
+#title {
+    padding-bottom: 40px;
+    font-size: 30px;
+}
