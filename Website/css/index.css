@@ -247,3 +247,7 @@ h2 {
     font-weight: bold;
     font-size: 20px;
 }
+
+#vereisten-list {
+    list-style: none;
+}
