@@ -51,8 +51,6 @@ function setLoginCookie(loginBool) {
     const cookieArr = document.cookie.split("; ");
 
     for (let i = 0; i < cookieArr.length; i++) {
-        const cookiePair = cookieArr[i].split("=");
-
         document.cookie = "isUserLoggedIn=" + loginBool + "; path=/"
         console.log(document.cookie);
     }
