@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soliciteer Pagina</title>
+    <link rel="stylesheet" href="css/doorgroeimogelijkheden.css">
     <link rel="stylesheet" href="css/soliciteer.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/top-button.css">
 </head>
 <body> 
 
-    <div class="wrapper"></div>
+    <div class="wrapper">
         <header>
             <h1>Nextsteps Solutions</h1>
         </header>
@@ -93,6 +94,31 @@
             </ul>
         </section>
     </div>
+
+    <div class="container">
+        <h1 id="doorgroei-h1">Doorgroeien</h1>
+        <form id="roleForm">
+            <label for="currentRole" id="doorgroei-label">Vul je huidige rol/positie in:</label>
+            <select id="currentRole" name="currentRole" required>
+                <option value="">--Kies een rol/positie--</option>
+                <option value="junior developer">Junior Developer</option>
+                <option value="mid-level developer">Mid-Level Developer</option>
+                <option value="senior developer">Senior Developer</option>
+                <option value="team lead">Team Lead</option>
+                <option value="project manager">Project Manager</option>
+                <option value="engineering manager">Engineering Manager</option>
+            </select>
+            <button type="submit">Lever In</button>
+        </form>
+
+        <div id="growthPath" class="hidden">
+            <h2>Potentiële Doorgroeimogelijkheden</h2>
+            <ul id="careerPaths"></ul>
+        </div>
+    </div>
+    
+    </div>
+
     
     <!-- navigatie bar -->
     <nav id="navbar">
@@ -124,5 +150,6 @@
     <script src="js/login.js"></script>
     <script src="js/soliciteer.js"></script>
     <script src="js/top-button.js"></script>
+    <script src="js/doorgroeimogelijkheden.js"></script>
 </body>
 </html>
