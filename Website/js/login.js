@@ -3,9 +3,9 @@ const logoutButton = document.getElementById("logout-button");
 const profielButton = document.getElementById("profiel-button");
 const emailbox = document.getElementById("email-box");
 const passwordBox = document.getElementById("password-box");
+const navbar = document.getElementById("navbar");
 
 check();
-
 
 function check(){
     if(getCookieValue("isUserLoggedIn") == "true"){
@@ -18,10 +18,12 @@ function check(){
     }
 }
 
+
 function logout(){
     setLoginCookie(false);
     check();
 }
+
 
 function login(){
     if (emailbox.value != "" && passwordBox.value != ""){
@@ -31,22 +33,26 @@ function login(){
         
 }
 
+
 function loggedIn(){
     loginButton.style.display = "none";
     profielButton.style.display = "inline";
     logoutButton.style.display = "inline";
+    navbar.style.display = "inline";
     console.log("logged in!");
 }
+
 
 function loggedOut(){
     profielButton.style.display = "none";
     logoutButton.style.display = "none";
     loginButton.style.display = "inline";
+    navbar.style.display = "inline";
     console.log("logged out!");
 }
 
-// COOKIES
 
+// COOKIES
 function setLoginCookie(loginBool) {
     const cookieArr = document.cookie.split("; ");
 
@@ -55,8 +61,6 @@ function setLoginCookie(loginBool) {
         console.log(document.cookie);
     }
   }
-
-// Voorbeeld: wanneer de gebruiker succesvol inlogt
 
 
 // Function to get the value of a specific cookie by name
@@ -75,6 +79,7 @@ function getCookieValue(name) {
   // Return null if the cookie is not found
   return null;
 }
+
 
 function clearCookies(){
     document.cookie = "isUserLoggedIn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";

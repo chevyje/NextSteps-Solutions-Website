@@ -141,3 +141,6 @@ section {
     color: var(--text-color);
 }
 
+#navbar {
+    display: none;
+}
