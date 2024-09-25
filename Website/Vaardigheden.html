@@ -4,55 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vaardigheden</title>
-    <style>
-        
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 20px;
-            max-width: 900px; /* Beperk de container tot de breedte voor 3 boxen */
-            margin: 20px auto; /* Centreer de container */
-        }
-
-        .box {
-            flex: 1 1 calc(33.333% - 20px); /* Zorgt voor 3 boxen naast elkaar met ruimte ertussen */
-            max-width: 268px; /* Maximaal 268px per box */
-            height: 500px;
-            background-color: white;
-            border: 1px solid black;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-
-        h1 {
-            font-size: 1.5em;
-            text-align: center;
-        }
-
-
-        /* Responsieve layout voor kleinere schermen */
-        @media (max-width: 768px) {
-            .box {
-                flex: 1 1 100%; /* Boxen worden dan 100% breed op mobiele apparaten */
-                max-width: none;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/vaardigheden.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/top-button.css">
 </head>
 
 <body>
-    <h1>Onze Young professionals</h1>
+
+    <div class="wrapper"></div>
+
+    <h1 id="title">Onze Young professionals</h1>
     <div class="container">
         <div class="box">
-            <img alt="profiel-foto" src="/assets/img/Tom.png" width="268px" height="300">
+            <img alt="profiel-foto" src="assets/img/Tom.png" width="268px" height="300">
             <h1>Tom</h1>
             <p>Vaardigheden:</p>
             <ul>
@@ -63,7 +27,7 @@
         </div>
 
         <div class="box">
-            <img alt="profiel-foto" src="/assets/img/Tim.png" width="268px" height="300">
+            <img alt="profiel-foto" src="assets/img/Tim.png" width="268px" height="300">
             <h1>Tim</h1>
             <p>Vaardigheden:</p>
             <ul>
@@ -74,7 +38,7 @@
         </div>
 
         <div class="box">
-            <img alt="profiel-foto" src="/assets/img/Duain.png" width="268px" height="300">
+            <img alt="profiel-foto" src="assets/img/Duain.png" width="268px" height="300">
             <h1>Duain</h1>
             <p>Vaardigheden:</p>
             <ul>
@@ -85,7 +49,7 @@
         </div>
 
         <div class="box">
-            <img alt="profiel-foto" src="/assets/img/Nick.png" width="268px" height="300">
+            <img alt="profiel-foto" src="assets/img/Nick.png" width="268px" height="300">
             <h1>Nick</h1>
             <p>Vaardigheden:</p>
             <ul>
@@ -96,7 +60,7 @@
         </div>
 
         <div class="box">
-            <img alt="profiel-foto" src="/assets/img/Niek.png" width="268px" height="300">
+            <img alt="profiel-foto" src="assets/img/Niek.png" width="268px" height="300">
             <h1>Niek</h1>
             <p>Vaardigheden:</p>
             <ul>
@@ -107,7 +71,7 @@
         </div>
 
         <div class="box">
-            <img alt="profiel-foto" src="/assets/img/Jurre.png" width="268px" height="300">
+            <img alt="profiel-foto" src="assets/img/Jurre.png" width="268px" height="300">
             <h1>Jurre</h1>
             <p>Vaardigheden:</p>
             <ul>
@@ -117,5 +81,26 @@
             </ul>
         </div>
     </div>
+
+    <!-- navigatie bar -->
+    <nav id="navbar">
+        <!-- Site logo -->
+        <label class="logo"><a id="logo" href="index.html">Nextstep Solutions</a></label>
+        <!-- Navigation links -->
+        <ul >
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="hbo-ict.html">HBO-ICT</a></li>
+          <li><a href="Vaardigheden.html">vaardigheden</a></li>
+          <li><a href="werken.html">Werken bij ons</a></li>
+          <li><a href="solliciteer.html">Solliciteren</a></li>
+          <li><a id="logout-button" onclick="logout()">Log uit</a></li>
+          <li><a id="login-button" href="login.html">Log in</a></li>
+          <li><a id="profiel-button" href="profiel.html">Profiel</a></li>
+        </ul>
+    </nav>
+
+
+    <script src="js/login.js"></script>
+    <script src="js/top-button.js"></script>
 </body>
 </html>
