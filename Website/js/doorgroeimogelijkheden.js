@@ -25,7 +25,7 @@ document.getElementById('roleForm').addEventListener('submit', function (event) 
         growthSection.classList.remove('hidden'); 
     } else {
         const noMatch = document.createElement('li');
-        noMatch.textContent = 'No growth paths available for this role.';
+        noMatch.textContent = 'Er zijn geen doorgroeimogelijkheden.';
         growthPaths.appendChild(noMatch);
         growthSection.classList.remove('hidden');
     }
