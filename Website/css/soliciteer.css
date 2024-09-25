@@ -170,3 +170,10 @@ button[type="submit"]:hover {
 .wrapper{
     margin-top: 180px;
 }
+
+#thanks {
+    color: var(--text-color);
+    text-align: center;
+    padding: 1em 0;
+}
+  
