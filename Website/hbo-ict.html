@@ -1,33 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Next Step Solutions</title>
+    <title>Vaardigheden ICT Opleiding</title>
     <link rel="stylesheet" href="css/hbo-ict.css">
     <link rel="stylesheet" href="css/top-button.css">
     <link rel="stylesheet" href="css/navbar.css">
 </head>
 <body>
-    <div class="wrapper">
-        <h1>HBO - ICT</h1>
-        <p>
-            Ben je goed thuis in de digitale wereld?
-            Ben je qua technische snufjes een early adapter en iedereen altijd een stapje voor?
-            En zoek je een afwisselende opleiding, die past bij jouw interesses? Dan is hbo-ICT wellicht jouw perfecte match,
-            want na het volgen van deze studie heb je talloze mogelijkheden op de arbeidsmarkt.
-        </p>
-        <p>
-            Maar wat houdt een hbo-ICT opleiding nu precies in?
-            Welke kennis doe je op en in welke functies kom je terecht na het afronden van je studie? 
-            En welke mogelijkheden zijn er om door te leren of werkervaring op te doen? 
-            Je leest het in dit artikel. 
-        </p>
-        <p>
-            
-        </p>
+    <div class="container">
+        <h1>Vaardigheden Ontwikkeld tijdens een ICT-Opleiding</h1>
+        
+        <div class="skill" onclick="toggleDescription('programmeren')">
+            <h2>Programmeren</h2>
+            <p id="programmeren" class="description">In een ICT-opleiding leer je verschillende programmeertalen zoals Python, Java, en C#. Programmeren vormt de kern van softwareontwikkeling.</p>
+        </div>
+
+        <div class="skill" onclick="toggleDescription('netwerken')">
+            <h2>Netwerken</h2>
+            <p id="netwerken" class="description">Netwerken gaat over het configureren en onderhouden van netwerkstructuren. Je leert over routers, switches en protocollen zoals TCP/IP.</p>
+        </div>
+
+        <div class="skill" onclick="toggleDescription('databasebeheer')">
+            <h2>Databasebeheer</h2>
+            <p id="databasebeheer" class="description">In databasebeheer leer je hoe je databases ontwerpt, beheert en optimaliseert. SQL en NoSQL zijn belangrijke technologieën in dit gebied.</p>
+        </div>
+
+        <div class="skill" onclick="toggleDescription('webontwikkeling')">
+            <h2>Webontwikkeling</h2>
+            <p id="webontwikkeling" class="description">Je ontwikkelt vaardigheden in front-end en back-end webontwikkeling met technologieën zoals HTML, CSS, JavaScript, en PHP.</p>
+        </div>
     </div>
-    
+
     <!-- navigatie bar -->
     <nav id="navbar">
         <!-- Site logo -->
@@ -58,5 +63,7 @@
     <!-- top button script -->
     <script src="js/top-button.js"></script>
     <script src="js/login.js"></script>
+    <script src="js/hbo-ict.js"></script>
+    
 </body>
 </html>
