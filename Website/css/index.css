@@ -23,7 +23,7 @@ body{
 }
 
 .hero{
-    height: calc(100vh - 160px);
+    height: calc(100vh - 140px);
     background: #1B252F;
     margin-top: 88px;
     padding: 20px;
