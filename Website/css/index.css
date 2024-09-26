@@ -102,6 +102,7 @@ body{
     align-items: flex-start; 
     gap: 10px; 
     padding: 20px;
+    flex-grow: 1;
 }
 
 .box1nummer2, .box2nummer2, .box3nummer2 {
@@ -113,6 +114,7 @@ body{
     flex-direction: column; 
     justify-content: flex-start; 
     align-items: center; 
+    flex-grow: 1;
 }
 
 .box1nummer2 img, .box2nummer2 img, .box3nummer2 img {
