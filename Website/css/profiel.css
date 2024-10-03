@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --background-color: #1B252F;
+    --accent-color: #087F8C;
+    --accent2-color: #C2D3CD;
+    --text-color: #fbfbfb;
+    --contrast-color: #F3F316;
+}
+
+::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+}
+
+html{
+    font-family: Poppins, 'Segoe UI', sans-serif;
+    color: var(--text-color);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+}
+
+.wrapper{
+    margin-top: 100px;
+}
+
+#username {
+    display: none;
+    color: var(--text-color);
+    font-size: 40px;
+}
+
+#username-box {
+    text-align: center;
+    padding: 1em 0;
+}
+/* CSS for centering and enlarging the SVG */
+.svg-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+}
+
+.svg-container svg {
+    width: 200px;
+    height: 200px;
+    filter: drop-shadow(0 0.2rem 0.25rem rgba(0, 0, 0, 0.2));
+}

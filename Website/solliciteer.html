@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soliciteer Pagina</title>
+    <link rel="stylesheet" href="css/doorgroeimogelijkheden.css">
+    <link rel="stylesheet" href="css/soliciteer.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/top-button.css">
+</head>
+<body> 
+
+    <div class="wrapper">
+        <header>
+            <h1>Nextsteps Solutions</h1>
+        </header>
+
+        <section id="job-listings">
+            <div id="title">
+                <h2>Beschikbare Beroepsrollen</h2>
+            </div>
+            <ul id="jobs">
+                <li class="job">
+                    <img draggable="false"src="assets/img/360_F_318606217_Hk8jo2MVoI33SQOkYrfOF929J7JgIP0P.jpg" alt="Frontend Developer">
+                    <div class="job-content">
+                        <h3>Frontend Developer</h3>
+                        <p><strong>Locatie:</strong> Amsterdam</p>
+                        <div class="job-description">
+                            <p> Als Frontend Developer werk je nauw samen met de ontwerp- en backendteams om de implementatie en 
+                                de gebruikersinterface voor onze webapplicaties verbeteren. Je bouwt herbruikbare code, zorgt voor UI/UX 
+                                aan standaarden wordt voldaan en applicaties worden geoptimaliseerd voor snelheid en schaalbaarheid. Ervaring met moderne 
+                                frontend-frameworks zoals React of Vue.js zijn essentieel, samen met sterke vaardigheden in HTML, CSS, 
+                                en JavaScript. Wij waarderen creativiteit en teamwerk, en jij speelt een sleutelrol bij het realiseren ervan 
+                                intuïtieve en responsieve ontwerpen voor miljoenen gebruikers. </p>
+                        </div>
+                        <button class="toggle-btn">Toon Meer</button>
+                        <button class="apply-btn" onclick="applyJob('Frontend Developer')">Solliciteer Nu</button>
+                    </div>
+                </li>
+                
+                <li class="job">
+                    <img draggable="false"src="assets/img/How-to-become-a-Backend-Developer.jpg" alt="Backend Developer">
+                    <div class="job-content">
+                        <h3>Backend Developer</h3>
+                        <p><strong>Locatie:</strong> Utrecht</p>
+                        <div class="job-description">
+                            <p> We zijn op zoek naar een ervaren Backend Developer om ons team te versterken en te helpen bij het bouwen van schaalbare, 
+                                krachtige server-side applicaties. Je bent verantwoordelijk voor het ontwerp, de architectuur, 
+                                en implementatie van API's en databases, waardoor de veiligheid, gegevensintegriteit en het systeem worden gewaarborgd 
+                                betrouwbaarheid. Vaardigheid in talen als Node.js, Python of Java, evenals ervaring met 
+                                SQL- en NoSQL-databases zijn vereist. Om dit te garanderen, werk je samen met multifunctionele teams 
+                                naadloze integratie van nieuwe functies en oplossingen bieden voor technische uitdagingen.</p>
+                        </div>
+                        <button class="toggle-btn">Toon Meer</button>
+                        <button class="apply-btn" onclick="applyJob('Backend Developer')">Solliciteer Nu</button>
+                    </div>
+                </li>
+                
+                <li class="job">
+                    <img draggable="false"src="assets/img/What-is-a-Product-Manager_ (1).jpg" alt="Product Manager">
+                    <div class="job-content">
+                        <h3>Product Manager</h3>
+                        <p><strong>Locatie:</strong> Eindhoven</p>
+                        <div class="job-description">
+                            <p> Als Product Manager leid je de levenscyclus van de productontwikkeling, van concept tot lancering. 
+                                Je werkt samen met engineering-, ontwerp- en marketingteams om productvereisten te definiëren, 
+                                Geef prioriteit aan functies en zorg ervoor dat het product voldoet aan de behoeften van zowel de markt als onze gebruikers. 
+                                Sterke communicatie- en leiderschapsvaardigheden zijn essentieel, omdat jij de belangrijkste schakel tussen beide bent 
+                                belanghebbenden. Je moet ervaring hebben met datagestuurde besluitvorming, het beheren van tijdlijnen en 
+                                producten leveren die aansluiten bij de visie en doelstellingen van het bedrijf.</p>
+                        </div>
+                        <button class="toggle-btn">Toon Meer</button>
+                        <button class="apply-btn" onclick="applyJob('Product Manager')">Solliciteer Nu</button>
+                    </div>
+                </li>
+
+                <li class="job">
+                    <img draggable="false"src="assets/img/What-is-a-UI-UX-Designer.jpg" alt="UI/UX Designer">
+                    <div class="job-content">
+                        <h3>UI/UX Designer</h3>
+                        <p><strong>Locatie:</strong> Den Haag</p>
+                        <div class="job-description">
+                            <p> We zijn op zoek naar een getalenteerde UI/UX-ontwerper om intuïtieve, gebruikersgerichte ontwerpen voor het web te creëren 
+                                mobiele applicaties. Je bent verantwoordelijk voor het uitvoeren van gebruikersonderzoek, wireframing en 
+                                prototyping, maar ook nauw samenwerken met ontwikkelaars om ervoor te zorgen dat uw ontwerpen dat ook zijn 
+                                effectief geïmplementeerd. Sterke kennis van ontwerptools zoals Sketch, Figma of Adobe XD is 
+                                vereist, samen met een diep begrip van de principes van gebruikerservaring. Je speelt een kritische rol 
+                                spelen een rol bij het verbeteren van het gebruikerstraject en zorgen ervoor dat onze applicaties visueel aantrekkelijk zijn 
+                                en gemakkelijk te gebruiken.</p>
+                        </div>
+                        <button class="toggle-btn">Toon Meer</button>
+                        <button class="apply-btn" onclick="applyJob('UI/UX Designer')">Solliciteer Nu</button>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </div>
+    
+    <!-- navigatie bar -->
+    <nav id="navbar">
+        <!-- Site logo -->
+        <label class="logo"><a id="logo" href="index.html">Nextstep Solutions</a></label>
+        <!-- Navigation links -->
+        <ul >
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="hbo-ict.html">HBO-ICT</a></li>
+        <li><a href="Vaardigheden.html">Vaardigheden</a></li>
+        <li><a href="werken.html">Werken bij ons</a></li>
+        <li><a href="solliciteer.html">Solliciteren</a></li>
+        <li><a href="doorgroeimogelijkheden.html">Doorgroeien</a></li>
+        <li><a id="logout-button" onclick="logout()" href="login.html">Log uit</a></li>
+        <li><a id="login-button" href="login.html">Log in</a></li>
+        <li><a id="profiel-button" href="profiel.html">Profiel</a></li>
+        </ul>
+    </nav>  
+
+    <!-- top button -->
+    <div id="top-button">
+        <a href="#top">
+            <svg height="24px" viewBox="0 -960 960 960" width="24px" fill="#F3F316">
+                <path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"/>
+            </svg>
+        </a>
+    </div>
+
+    <script src="js/login.js"></script>
+    <script src="js/soliciteer.js"></script>
+    <script src="js/top-button.js"></script>
+    <script src="js/doorgroeimogelijkheden.js"></script>
+</body>
+</html>

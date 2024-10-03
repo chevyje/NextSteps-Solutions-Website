@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doorgroeimogelijkheden</title>
+    <link rel="stylesheet" href="css/doorgroeimogelijkheden.css">
+    <link rel="stylesheet" href="css/top-button.css">
+    <link rel="stylesheet" href="css/navbar.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Doorgroeien</h1>
+        <form id="roleForm">
+            <label for="currentRole">Kies je huidige rol/positie:</label>
+            <select id="currentRole" name="currentRole" required>
+                <option value="">--Kies een positie--</option>
+                <option value="junior developer">Junior Developer</option>
+                <option value="mid-level developer">Mid-Level Developer</option>
+                <option value="senior developer">Senior Developer</option>
+                <option value="scrum master">Scrum Master</option>
+                <option value="product owner">Product Owner</option>
+                <option value="senior engineer">Senior Engineer</option>
+            </select>
+            <button type="submit">Check</button>
+        </form>
+
+        <div id="growthPath" class="hidden">
+            <h2>Potentiële doorgroeimogelijkheden</h2>
+            <ul id="careerPaths"></ul>
+        </div>
+    </div>
+
+
+    <!-- navigatie bar -->
+    <nav id="navbar">
+        <!-- Site logo -->
+        <label class="logo"><a id="logo" href="index.html">Nextstep Solutions</a></label>
+        <!-- Navigation links -->
+        <ul >
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="hbo-ict.html">HBO-ICT</a></li>
+        <li><a href="Vaardigheden.html">Vaardigheden</a></li>
+        <li><a href="werken.html">Werken bij ons</a></li>
+        <li><a href="solliciteer.html">Solliciteren</a></li>
+        <li><a href="doorgroeimogelijkheden.html">Doorgroeien</a></li>
+        <li><a id="logout-button" onclick="logout()" href="login.html">Log uit</a></li>
+        <li><a id="login-button" href="login.html">Log in</a></li>
+        <li><a id="profiel-button" href="profiel.html">Profiel</a></li>
+        </ul>
+    </nav>  
+
+    <!-- top button -->
+    <div id="top-button">
+        <a href="#top">
+            <svg height="24px" viewBox="0 -960 960 960" width="24px" fill="#F3F316">
+                <path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"/>
+            </svg>
+        </a>
+    </div>
+
+    <!-- top button script -->
+    <script src="js/top-button.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/doorgroeimogelijkheden.js"></script>
+</body>
+</html>
